@@ -1,8 +1,5 @@
-full_name = input("ФИО: ")
-
+full_name = " ".join(str(input("ФИО:")).split())
 parts = full_name.split()
 initials = "".join([part[0].upper() for part in parts])
-or_len = len(full_name)
-clean_len = len(full_name.replace(" ", ""))
 print(f"Инициалы: {initials}.")
-print(f"Длина (символов): {clean_len}")
+print(f"Длина (символов): {len(full_name)}")
