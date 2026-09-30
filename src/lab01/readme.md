@@ -16,4 +16,4 @@
 ![Пример работы](https://github.com/sashggw/python_labs/blob/main/image/lab01/ex05.1.png)
 # [Задание 6]
 ### Программа собирает данные об участниках лабораторной работы и показывает сколько человек записалось на очный и заочный формат
-![Пример работы](https://github.com/sashggw/python_labs/blob/main/image/lab01/ex05.1.png)
+![Пример работы](https://github.com/sashggw/python_labs/blob/main/image/lab01/ex06.1.png)
