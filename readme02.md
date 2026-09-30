@@ -49,7 +49,7 @@ def flatten(mat: list[list | tuple]) -> list:
 
 
 
-![Пример работы](https://github.com/Shayder0570/python_labs/blob/main/images/lab02/arrays.png)
+![Пример работы]()
 
 ### * Задание 2 — matrix.py
 
@@ -91,7 +91,9 @@ def col_sums(mat: list[list[float | int]]) -> list[float]:
 
 ### Тест-кейсы: 
 
-![Пример работы](https://github.com/Shayder0570/python_labs/blob/main/images/lab02/matrix.png)
+![Пример работы](./image/lab02/transpose.png)
+![Пример работы](./image/lab02/row_sum.png)
+![Пример работы](./image/lab02/col_sum.png)
 
 ### * Задание 3 - tuples.py
 
@@ -137,4 +139,4 @@ def format_record(rec: tuple[str, str, float]) -> str:
 ```
 ### Тест-кейсы:
 
-![Пример работы](https://github.com/Shayder0570/python_labs/blob/main/images/lab02/tuples.png)
+![Пример работы](./image/lab02/format_record.png)
