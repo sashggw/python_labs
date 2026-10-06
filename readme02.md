@@ -47,9 +47,9 @@ def flatten(mat: list[list | tuple]) -> list:
 ### Тест-кейсы:
 
 
-
-
-![Пример работы]()
+![Пример работы](./image/lab02/min_max.png)
+![Пример работы](./image/lab02/uniquue_sorted.png)
+![Пример работы](./image/lab02/flatten.png)
 
 ### * Задание 2 — matrix.py
 
