@@ -11,10 +11,8 @@ def min_max(nums: list[float | int]) -> tuple[float | int, float | int]:
     min_val = max_val = nums[0]
 
     for num in nums[1:]:
-        if num < min_val:
-            min_val = num
-        elif num > max_val:
-            max_val = num
+        if num < min_val: min_val = num
+        elif num > max_val: max_val = num
 
     return min_val, max_val
 
@@ -32,7 +30,6 @@ def unique_sorted(nums: list[float | int]) -> list[float | int]:
 * flatten()
 «Расплющивает» список списков/кортежей в один список по строкам (row-major). Если встретилась строка/элемент, который не является списком/кортежем — TypeError.
 
-
 ```python
 def flatten(mat: list[list | tuple]) -> list:
     for i in mat:
@@ -47,9 +44,9 @@ def flatten(mat: list[list | tuple]) -> list:
 
 ```
 ### Тест-кейсы:
-![Пример работы](https://github.com/sashggw/python_labs/blob/main/image/lab02/min_max.png)
-![Пример работы](https://github.com/sashggw/python_labs/blob/main/image/lab02/uniquue_sorted.png)
-![Пример работы](https://github.com/sashggw/python_labs/blob/main/image/lab02/flatten.png)
+![Пример работы](https://github.com/sashggw/python_labs/blob/main/image/lab02/min_max01.png)
+![Пример работы](https://github.com/sashggw/python_labs/blob/main/image/lab02/unique_sorted01.png)
+![Пример работы](https://github.com/sashggw/python_labs/blob/main/image/lab02/flatten01.png)
 
 ### * Задание 2 — matrix.py
 
@@ -68,8 +65,10 @@ def transpose(mat: list[list[float | int]]) -> list[list]:
             
     return [[mat[i][j] for i in range(len(mat))] for j in range(len(mat[0]))]
 ```
+
 * row_sums()
 ##### Суммирует по каждой строке. Требуется прямоугольность (см. выше).
+
 ```python
 def row_sums(mat: list[list[float | int]]) -> list[float]:
     for i in range(len(mat)):
@@ -79,6 +78,7 @@ def row_sums(mat: list[list[float | int]]) -> list[float]:
 
     return [sum(row) for row in mat]
 ```
+
 * col_sums()
 ##### Суммирует по каждому столбцу. Требуется прямоугольность.
 ```python
