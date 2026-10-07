@@ -40,7 +40,7 @@ def col_sums(mat: list[list[float | int]]) -> list[float]:
 
 
     return [sum(col) for col in zip(*mat)]
-#либо можно было сделать transpose ,а потом row_sums :p
+
 print("col_sums")
 print(f"[[1, 2, 3], [4, 5, 6]]→{col_sums([[1, 2, 3], [4, 5, 6]])}")
 print(f"[[-1, 1], [10, -10]]→{col_sums([[-1, 1], [10, -10]])}")

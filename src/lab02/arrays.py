@@ -1,8 +1,8 @@
 #/////////////////////////////MIN_MAX///////////////////////////////////////////
 def min_max(nums: list[float | int]) -> tuple[float | int, float | int]:
 
-#    if not nums:
-#        raise ValueError("список пуст")
+    if not nums:
+        raise ValueError("список пуст")
 
     min_val = max_val = nums[0]
 
@@ -33,7 +33,6 @@ print(f"[3, 1, 2, 1, 3]→{unique_sorted([3, 1, 2, 1, 3])}")
 print(f"[]→{unique_sorted([])}")
 print(f"[-1, -1, 0, 2, 2]→{unique_sorted([-1, -1, 0, 2, 2])}")
 print(f"[1.0, 1, 2.5, 2.5, 0]→{unique_sorted([1.0, 1, 2.5, 2.5, 0])}")
-
 
 
 #////////////////////////////FLATTEN///////////////////////////////////////////
