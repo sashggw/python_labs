@@ -2,34 +2,27 @@
 
 def format_record(rec: tuple[str, str, float]) -> str:
 
-    if rec.__class__!= tuple:
-        raise TypeError("был введен не кортеж")
-
-    if len(rec) != 3:
-        raise TypeError("не достаточно данных")
+    if rec.__class__!= tuple: raise TypeError("был введен не кортеж")
+    if len(rec) < 3: raise TypeError("недостаточно данных")
+    if len(rec) > 3: raise TypeError("излишек данных")
 
     fio, group, gpa = rec
 
-    if group.__class__ != str:
-        raise TypeError("не правильный формат группы")
-    if fio.__class__ != str:
-        raise TypeError("не правильный формат ФИО")
-    if gpa.__class__ != int and gpa.__class__ != float:
-        raise TypeError("не правильный формат gpa")
+    if group.__class__ != str: raise TypeError("не правильный формат группы")
+    if fio.__class__ != str: raise TypeError("не правильный формат ФИО")
+    if gpa.__class__ != int and gpa.__class__ != float: raise TypeError("не правильный формат gpa")
 
-    slova = fio.split()
-    if len(slova) < 2:
-        raise ValueError("Слишком короткое ФИО")
-    if not group.strip():
-        raise ValueError("пустая группа")
+    fio_parts = fio.split()
+    if len(fio_parts) < 2: raise ValueError("Слишком короткое ФИО")
+    if not group.strip(): raise ValueError("пустая группа")
 
-    familia = slova[0].capitalize()
+    surname = fio_parts[0].capitalize()
 
-    initialy = ""
-    for imya in slova[1:3]:
-        initialy += imya[0].upper() + "."
+    initials = ""
+    for name in fio_parts[1:3]:
+        initials += name[0].upper() + "."
 
-    return f"{familia} {initialy}, гр. {group.strip()}, GPA {gpa:.2f}"
+    return f"{surname} {initials}, гр. {group.strip()}, GPA {gpa:.2f}"
 
 print("format_record")
 print(f'("Иванов Иван Иванович", "BIVT-25", 4.6)→{format_record(("Иванов Иван Иванович", "BIVT-25", 4.6))}')
