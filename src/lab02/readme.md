@@ -39,6 +39,7 @@ def flatten(mat: list[list | tuple]) -> list:
     big_list = []
     for stroka in mat:
         for element in stroka:
+        
            big_list.append(element)
     return big_list
 
