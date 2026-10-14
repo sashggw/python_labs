@@ -96,18 +96,28 @@ def top_n(freq: dict[str, int], n: int = 5) -> list[tuple[str, int]]:
 ## --------------------TEXT_STATS.PY--------------------
 ```python
 import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 from lib.text import normalize, tokenize, count_freq, top_n
 
-text = sys.stdin.read()
-text = normalize(text)
-tokens = tokenize(text)
-freq = count_freq(tokens)
 
-print(f"Всего слов: {len(tokens)}")
-print(f"Уникальных слов: {len(freq)}")
-print("Топ-5:")
-for word, count in top_n(freq, n=5):
-    print(f"{word}:{count}")
+def main() -> None:
+    text = sys.stdin.read()
+    text = normalize(text)
+    tokens = tokenize(text)
+    freq = count_freq(tokens)
+
+    print(f"Всего слов: {len(tokens)}")
+    print(f"Уникальных слов: {len(freq)}")
+    print("Топ-5:")
+    for word, count in top_n(freq, n=5):
+        print(f"{word}:{count}")
+
+
+if __name__ == "__main__":
+    main()
 ```
 
 Функция читает весь ввод из stdin через sys.stdin.read(), прогоняет его через normalize, tokenize и count_freq, а затем печатает статистику: сколько всего слов (len(tokens)), сколько уникальных (len(freq) — ключи словаря уникальны по определению) и топ-5 частотных слов в формате слово:количество. Список пар для печати даёт top_n(freq, n=5), а распаковка for word, count in ... сразу разбирает каждую пару на слово и число.
