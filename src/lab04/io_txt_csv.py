@@ -26,6 +26,7 @@ def write_csv(
         widths = {len(r) for r in rows}
         if len(widths) > 1: raise ValueError(f"Строки имеют разную длину: {sorted(widths)}")
     p = Path(path)
+    ensure_parent_dir(path)
     with p.open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         if header is not None: w.writerow(header)
