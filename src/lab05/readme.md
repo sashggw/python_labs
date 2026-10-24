@@ -185,10 +185,10 @@ csv_to_xlsx(
     "data/out/people.xlsx",
 )
 ```
-![Пример работы (CSV → XLSX)]()
+![Пример работы (CSV → XLSX)](https://github.com/sashggw/python_labs/blob/main/image/lab05/img_xlsx_result.png)
 Рис. 3. Результат преобразования CSV в XLSX.
 
-### 4. Обработка ошибок (Валидация)
+### Обработка ошибок (Валидация)
 
 При попытке передать в функцию `json_to_csv` файл с другим расширением (например, CSV) или невалидные данные, выбрасывается исключение `ValueError` (или `JSONDecodeError`). Это защищает программу от создания битых файлов.
 
