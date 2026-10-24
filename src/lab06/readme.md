@@ -14,12 +14,12 @@
 ### 1. Подкоманда `cat`
 Выводит содержимое файла в консоль. С флагом `-n` нумерует строки.
 
-**Пример запуска:**
+Пример запуска:
 ```bash
 python src/lab06/cli_text.py cat --input data/samples/people.csv -n
 ```
-Код реализации:
 
+Код реализации:
 ```python
 def cmd_cat(args):
     """Вывод содержимого файла (аналог cat)."""
@@ -37,11 +37,10 @@ def cmd_cat(args):
 ![Пример работы](https://github.com/sashggw/python_labs/blob/main/image/lab06/02_cat.png)
 Рис. 1. Вывод содержимого файла с нумерацией строк.
 
-2. Подкоманда stats
+### 2. Подкоманда stats
 Анализирует частоту слов в текстовом файле, используя функции из ЛР3.
 
 Пример запуска:
-
 ```bash
 python src/lab06/cli_text.py stats --input data/samples/people.txt --top 3
 ```
@@ -57,14 +56,13 @@ csv2json — конвертирует CSV в JSON;
 csv2xlsx — конвертирует CSV в Excel (XLSX).
 
 Пример запуска всех трех конвертеров:
-
 ```bash
 python src/lab06/cli_convert.py json2csv --in data/samples/people.json --out data/out/cli_people.csv
 python src/lab06/cli_convert.py csv2json --in data/samples/people.csv --out data/out/cli_people.json
 python src/lab06/cli_convert.py csv2xlsx --in data/samples/people.csv --out data/out/cli_people.xlsx
 ```
-Код реализации:
 
+Код реализации:
 ```python
 def main():
     parser = argparse.ArgumentParser(description="Конвертеры данных")
@@ -93,6 +91,7 @@ def main():
 Справка и обработка ошибок
 Для вывода всех доступных команд и параметров используется стандартный флаг --help.
 
+Пример запуска:
 ```bash
 python src/lab06/cli_text.py --help
 python src/lab06/cli_convert.py --help
@@ -102,6 +101,7 @@ python src/lab06/cli_convert.py --help
 
 При передаче несуществующего файла программа не выбрасывает стек вызовов (Traceback), а выводит аккуратное сообщение об ошибке.
 
+Пример запуска:
 ```bash
 python src/lab06/cli_text.py cat --input data/samples/nope.txt
 ```
