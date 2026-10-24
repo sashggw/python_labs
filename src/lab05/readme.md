@@ -68,7 +68,7 @@ json_to_csv(
     "data/out/people_from_json.csv",
 )
 ```
-![Пример работы (JSON → CSV)]()
+![Пример работы (JSON → CSV)](https://github.com/sashggw/python_labs/blob/main/image/lab05/samples%20-%20out.png)
 Рис. 1. Результат преобразования JSON в CSV.
 
 ### 2. Функция csv_to_json
@@ -118,8 +118,9 @@ csv_to_json(
     "data/out/people_from_csv.json",
 )
 ```
-![Пример работы (CSV → JSON)]()
+![Пример работы (CSV → JSON)](https://github.com/sashggw/python_labs/blob/main/image/lab05/img_xlsx_result.png)
 Рис. 2. Результат преобразования CSV в JSON.
+
 
 ## Задание B — CSV → XLSX
 Модуль csv_xlsx.py содержит функцию конвертации таблицы в формат Excel.
@@ -186,3 +187,10 @@ csv_to_xlsx(
 ```
 ![Пример работы (CSV → XLSX)]()
 Рис. 3. Результат преобразования CSV в XLSX.
+
+### 4. Обработка ошибок (Валидация)
+
+При попытке передать в функцию `json_to_csv` файл с другим расширением (например, CSV) или невалидные данные, выбрасывается исключение `ValueError` (или `JSONDecodeError`). Это защищает программу от создания битых файлов.
+
+![Ошибка валидации](https://github.com/sashggw/python_labs/blob/main/image/lab05/img_validation_error.png)
+Рис. 4. Проверка обработки исключения при неверном формате файла.*
