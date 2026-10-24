@@ -118,7 +118,7 @@ csv_to_json(
     "data/out/people_from_csv.json",
 )
 ```
-![Пример работы (CSV → JSON)](https://github.com/sashggw/python_labs/blob/main/image/lab05/img_xlsx_result.png)
+![Пример работы (CSV → JSON)](https://github.com/sashggw/python_labs/blob/main/image/lab05/img_json_result.png)
 Рис. 2. Результат преобразования CSV в JSON.
 
 
