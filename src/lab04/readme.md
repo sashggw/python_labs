@@ -91,8 +91,8 @@ def ensure_parent_dir(path: str | Path) -> None:
 ```
 
 #### Пример запуска
-![](https://github.com/sashggw/python_labs/blob/main/image/lab04/case_G_ensure_dir.png)
 ![](https://github.com/sashggw/python_labs/blob/main/image/lab04/6.png)
+![](https://github.com/sashggw/python_labs/blob/main/image/lab04/case_G_ensure_dir.png)
 
 Результат записи данных в CSV-файл.
 
@@ -185,8 +185,8 @@ python src/lab04/text_report.py --in data/lab04/cp1251.txt --encoding cp1251
 ```
 
 #### Кодировка cp1251
-![](https://github.com/sashggw/python_labs/blob/main/image/lab04/case_C_cp1251.png)
 ![](https://github.com/sashggw/python_labs/blob/main/image/lab04/3.png)
+![](https://github.com/sashggw/python_labs/blob/main/image/lab04/case_C_cp1251.png)
 
 ### Запуск несуществующего файла
 
