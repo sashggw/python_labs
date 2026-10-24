@@ -17,9 +17,10 @@
 **Пример запуска:**
 ```bash
 python src/lab06/cli_text.py cat --input data/samples/people.csv -n
+```
 Код реализации:
 
-python
+```python
 def cmd_cat(args):
     """Вывод содержимого файла (аналог cat)."""
     try:
@@ -33,7 +34,7 @@ def cmd_cat(args):
         print(f"Ошибка: файл не найден: {args.input}", file=sys.stderr)
         sys.exit(1)
 ```
-![Пример работы](https://image/lab06/02_cat.png)
+![Пример работы](https://github.com/sashggw/python_labs/blob/main/image/lab06/02_cat.png)
 Рис. 1. Вывод содержимого файла с нумерацией строк.
 
 2. Подкоманда stats
@@ -44,7 +45,7 @@ def cmd_cat(args):
 ```bash
 python src/lab06/cli_text.py stats --input data/samples/people.txt --top 3
 ```
-![Пример работы](https://image/lab06/03_stats.png)
+![Пример работы](https://github.com/sashggw/python_labs/blob/main/image/lab06/03_stats.png)
 Рис. 2. Анализ частот слов.
 
 ## Задание B — CLI-конвертеры (cli_convert.py)
@@ -86,7 +87,7 @@ def main():
         print(f"Ошибка конвертации: {e}", file=sys.stderr)
         sys.exit(1)
 ```
-![Пример работы](https://image/lab06/04_convert.png)
+![Пример работы](https://github.com/sashggw/python_labs/blob/main/image/lab06/04_convert.png)
 Рис. 3. Успешное выполнение трех конвертаций.
 
 Справка и обработка ошибок
@@ -96,7 +97,7 @@ def main():
 python src/lab06/cli_text.py --help
 python src/lab06/cli_convert.py --help
 ```
-![Пример работы](https://image/lab06/01_help.png)
+![Пример работы](https://github.com/sashggw/python_labs/blob/main/image/lab06/01_help.png)
 Рис. 4. Работа встроенной справки argparse.
 
 При передаче несуществующего файла программа не выбрасывает стек вызовов (Traceback), а выводит аккуратное сообщение об ошибке.
@@ -104,5 +105,5 @@ python src/lab06/cli_convert.py --help
 ```bash
 python src/lab06/cli_text.py cat --input data/samples/nope.txt
 ```
-![Пример работы](https://image/lab06/05_error.png)
+![Пример работы](https://github.com/sashggw/python_labs/blob/main/image/lab06/05_error.png)
 Рис. 5. Обработка ошибки (файл не найден).
