@@ -3,15 +3,13 @@
 def bubble_sort(nums: list[int]) -> list[int]:
     """Пузырьковая сортировка. Возвращает НОВЫЙ отсортированный список."""
     res = list(nums)
-    n = len(res)
-    for i in range(n):
+    for i in range(len(res)):
         swapped = False
         for j in range(0, n - i - 1):
             if res[j] > res[j + 1]:
                 res[j], res[j + 1] = res[j + 1], res[j]
                 swapped = True
-        if not swapped:  # ★ Ранний выход
-            break
+        if not swapped: break
     return res
 
 def insertion_sort(nums: list[int]) -> list[int]:
@@ -29,11 +27,9 @@ def insertion_sort(nums: list[int]) -> list[int]:
 def selection_sort(nums: list[int]) -> list[int]:
     """Сортировка выбором. Возвращает НОВЫЙ отсортированный список."""
     res = list(nums)
-    n = len(res)
-    for i in range(n):
+    for i in range(len(res)):
         min_idx = i
         for j in range(i + 1, n):
-            if res[j] < res[min_idx]:
-                min_idx = j
+            if res[j] < res[min_idx]: min_idx = j
         res[i], res[min_idx] = res[min_idx], res[i]
     return res
